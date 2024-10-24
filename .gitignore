@@ -1,0 +1,6 @@
+result
+.Rhistory
+.Renviorn
+.env
+data/*
+!data/README.md
