@@ -1,0 +1,20 @@
+Package: rph2024.haunted
+Title: Haunted Places Quiz Shiny App
+Version: 0.0.0.9000
+Authors@R: 
+    person("Eric", "Nantz", , "theRcast@gmail.com", role = c("aut", "cre"))
+Description: A Shiny Application to test your knowledge to escape haunted
+    locations.
+License: MIT + file LICENSE
+URL: https://github.com/rpodcast/rph2024.haunted
+BugReports: https://github.com/rpodcast/rph2024.haunted/issues
+Imports: 
+    bslib,
+    config,
+    duckplyr,
+    golem,
+    shiny,
+    stringr
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.3.2

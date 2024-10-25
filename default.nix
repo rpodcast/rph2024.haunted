@@ -47,6 +47,9 @@ let
       base64enc
       reactable
       golem
+      usethis
+      devtools
+      attachment
       shiny;
   };
  
