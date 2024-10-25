@@ -46,6 +46,7 @@ let
       bsicons
       base64enc
       reactable
+      golem
       shiny;
   };
  
