@@ -42,3 +42,15 @@ process_haunted_data <- function() {
 #' * incorrect_choice_1
 #' * incorrect_choice_2
 #' * incorrect_choice_3
+display_quiz_question <- function(place_name, question_text, correct_answer, incorrect_choice_1, incorrect_choice_2, incorrect_choice_3) {
+  return(
+    list(
+      place_name = place_name,
+      question_text = question_text,
+      correct_answer = correct_answer,
+      incorrect_choice_1 = incorrect_choice_1,
+      incorrect_choice_2 = incorrect_choice_2,
+      incorrect_choice_3 = incorrect_choice_3
+    )
+  )
+}
