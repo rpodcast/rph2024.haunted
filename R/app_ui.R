@@ -11,7 +11,13 @@ app_ui <- function(request) {
     golem_add_external_resources(),
     # Your application UI logic
     page_fluid(
-      golem::golem_welcome_page() # Remove this line to start building your UI
+      mod_map_ui("map_1"),
+      actionButton(
+        "launch_quiz_question",
+        "Begin Question"
+      ),
+      verbatimTextOutput("debug")
+      #golem::golem_welcome_page() # Remove this line to start building your UI
     )
   )
 }

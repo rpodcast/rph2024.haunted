@@ -12,7 +12,9 @@ Imports:
     bslib,
     config,
     duckplyr,
+    glue,
     golem,
+    jsonlite,
     shiny,
     stringr
 Encoding: UTF-8

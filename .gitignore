@@ -3,4 +3,6 @@ result
 .Renviron
 .env
 data/*
+prototyping/*
+!prototyping/README.md
 !data/README.md
