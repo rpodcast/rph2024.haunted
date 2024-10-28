@@ -26,6 +26,9 @@ mod_map_server <- function(
   moduleServer(id, function(input, output, session){
     ns <- session$ns
 
+    # reactive for click selection of marker
+    selected_click <- reactiveVal(NULL)
+
     # create icons for map
     icon_path <- "inst/app/www/map_icons"
     map_icons <- iconList(
@@ -85,22 +88,35 @@ mod_map_server <- function(
         setView(lng = -98.5795, lat = 39.8283, zoom = 4)
     })
 
+    # register location selected
+    observeEvent(input$map_marker_click, {
+      req(input$map_marker_click)
+      selected_click(input$map_marker_click)
+    })
+
+    # reset location selected if map body is clicked
+    observeEvent(input$map_click, {
+      selected_click(NULL)
+    })
+
     # remove current selected marker if remove trigger
     observeEvent(remove_trigger(), {
       req(remove_trigger())
-      req(input$map_marker_click)
+      req(selected_click())
       message("removing marker")
-      click <- input$map_marker_click
+      click <- selected_click()
       proxy <- leafletProxy("map", data = map_data)
       proxy |>
         removeMarker(layerId = click$id)
-
+      
+      # reset selected item
+      selected_click(NULL)
     })
 
     # reactive for location selected
     selected_location <- reactive({
-      req(input$map_marker_click)
-      click <- input$map_marker_click
+      req(selected_click())
+      click <- selected_click()
       selected_location <- map_data |>
         dplyr::filter(location == click$id) |>
         dplyr::pull(location)
