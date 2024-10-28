@@ -15,13 +15,14 @@ run_app <- function(
   ...
 ) {
   with_golem_options(
-    app = shinyApp(
-      ui = app_ui,
+    app = auth0::shinyAppAuth0(
+      ui = app_ui(),
       server = app_server,
       onStart = onStart,
       options = options,
       enableBookmarking = enableBookmarking,
-      uiPattern = uiPattern
+      uiPattern = uiPattern,
+      config_file = "inst/app/_auth0.yml"
     ),
     golem_opts = list(...)
   )
