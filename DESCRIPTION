@@ -11,12 +11,21 @@ BugReports: https://github.com/rpodcast/rph2024.haunted/issues
 Imports: 
     bslib,
     config,
+    dplyr,
     duckplyr,
+    elmer (>= 0.0.0.9000),
+    fs,
     glue,
     golem,
     jsonlite,
+    leaflet,
+    pkgload,
     shiny,
-    stringr
+    shinyWidgets,
+    stringr,
+    tibble
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.3.2
+Remotes: 
+    hadley/elmer

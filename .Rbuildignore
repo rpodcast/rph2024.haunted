@@ -9,3 +9,6 @@ default.nix
 result
 ^LICENSE\.md$
 ^CODE_OF_CONDUCT\.md$
+^app\.R$
+^rsconnect$
+^\.rscignore$
