@@ -1,6 +1,7 @@
 # Set options here
 options(golem.app.prod = FALSE) # TRUE = production mode, FALSE = development mode
 options(duckdb.materialize_message = FALSE)
+options(auth0_disable = FALSE)
 # Comment this if you don't want the app to be served on a random port
 #options(shiny.port = httpuv::randomPort())
 options(shiny.port = 2556)
