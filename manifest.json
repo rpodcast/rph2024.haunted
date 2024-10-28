@@ -239,6 +239,39 @@
         "RemoteSha": "0.3.1"
       }
     },
+    "auth0": {
+      "Source": "CRAN",
+      "Repository": "https://p3m.dev/cran/latest",
+      "description": {
+        "Package": "auth0",
+        "Type": "Package",
+        "Title": "Authentication in Shiny with Auth0",
+        "Version": "0.2.3",
+        "Authors@R": "c(\n    person(\"Julio\", \"Trecenti\", email = \"julio.trecenti@gmail.com\", role = \"cre\"),\n    person(\"Daniel\", \"Falbel\", email = \"dfalbel@gmail.com\", role = \"aut\"),\n    person(\"José\", \"Jesus\", email = \"jjesusfilho@gmail.com\", role = \"ctb\"),\n    person(\"Dean\", \"Attali\", email = \"daattali@gmail.com\", role = \"ctb\"),\n    person(\"C\", \"Lente\", email = \"c@lente.dev\", role = \"ctb\"))",
+        "Description": "Uses Auth0 API (see <https://auth0.com> for more \n    information) to use a simple authentication system. It provides \n    tools to log in and out a shiny application using social networks or a list\n    of e-mails.",
+        "BugReports": "https://github.com/curso-r/auth0/issues",
+        "License": "MIT + file LICENSE",
+        "Encoding": "UTF-8",
+        "RoxygenNote": "7.2.3",
+        "Imports": "httr, shiny, yaml, utils, shinyjs",
+        "Suggests": "knitr, rmarkdown",
+        "VignetteBuilder": "knitr",
+        "URL": "https://curso-r.github.io/auth0/",
+        "NeedsCompilation": "no",
+        "Packaged": "2023-03-22 18:59:25 UTC; julio",
+        "Author": "Julio Trecenti [cre],\n  Daniel Falbel [aut],\n  José Jesus [ctb],\n  Dean Attali [ctb],\n  C Lente [ctb]",
+        "Maintainer": "Julio Trecenti <julio.trecenti@gmail.com>",
+        "Repository": "RSPM",
+        "Date/Publication": "2023-03-26 21:50:05 UTC",
+        "Built": "R 4.4.0; ; 2024-04-24 22:59:43 UTC; unix",
+        "RemoteType": "standard",
+        "RemotePkgRef": "auth0",
+        "RemoteRef": "auth0",
+        "RemoteRepos": "https://p3m.dev/cran/__linux__/jammy/latest",
+        "RemotePkgPlatform": "x86_64-pc-linux-gnu-ubuntu-22.04",
+        "RemoteSha": "0.2.3"
+      }
+    },
     "base64enc": {
       "Source": "CRAN",
       "Repository": "https://p3m.dev/cran/latest",
@@ -1218,16 +1251,16 @@
         "RemoteUsername": "hadley",
         "RemotePkgRef": "github::hadley/elmer",
         "RemoteRef": "HEAD",
-        "RemoteSha": "ce38e4663f47ba68ea6f9eb7eb758996f88a0ed6",
+        "RemoteSha": "79803f197994ccd7ba88d73b7b12245dbbb60a6c",
         "GithubRepo": "elmer",
         "GithubUsername": "hadley",
         "GithubRef": "HEAD",
-        "GithubSHA1": "ce38e4663f47ba68ea6f9eb7eb758996f88a0ed6",
+        "GithubSHA1": "79803f197994ccd7ba88d73b7b12245dbbb60a6c",
         "NeedsCompilation": "no",
-        "Packaged": "2024-10-28 17:11:26 UTC; rstudio",
+        "Packaged": "2024-10-28 19:33:22 UTC; rstudio",
         "Author": "Hadley Wickham [aut, cre],\n  Posit Software, PBC [cph, fnd]",
         "Maintainer": "Hadley Wickham <hadley@posit.co>",
-        "Built": "R 4.4.1; ; 2024-10-28 17:11:27 UTC; unix"
+        "Built": "R 4.4.1; ; 2024-10-28 19:33:22 UTC; unix"
       }
     },
     "evaluate": {
@@ -1822,6 +1855,40 @@
         "RemoteSha": "1.6.15"
       }
     },
+    "httr": {
+      "Source": "CRAN",
+      "Repository": "https://p3m.dev/cran/latest",
+      "description": {
+        "Package": "httr",
+        "Title": "Tools for Working with URLs and HTTP",
+        "Version": "1.4.7",
+        "Authors@R": "c(\n    person(\"Hadley\", \"Wickham\", , \"hadley@posit.co\", role = c(\"aut\", \"cre\")),\n    person(\"Posit, PBC\", role = c(\"cph\", \"fnd\"))\n  )",
+        "Description": "Useful tools for working with HTTP organised by HTTP verbs\n    (GET(), POST(), etc). Configuration functions make it easy to control\n    additional request components (authenticate(), add_headers() and so\n    on).",
+        "License": "MIT + file LICENSE",
+        "URL": "https://httr.r-lib.org/, https://github.com/r-lib/httr",
+        "BugReports": "https://github.com/r-lib/httr/issues",
+        "Depends": "R (>= 3.5)",
+        "Imports": "curl (>= 5.0.2), jsonlite, mime, openssl (>= 0.8), R6",
+        "Suggests": "covr, httpuv, jpeg, knitr, png, readr, rmarkdown, testthat\n(>= 0.8.0), xml2",
+        "VignetteBuilder": "knitr",
+        "Config/Needs/website": "tidyverse/tidytemplate",
+        "Encoding": "UTF-8",
+        "RoxygenNote": "7.2.3",
+        "NeedsCompilation": "no",
+        "Packaged": "2023-08-15 02:56:56 UTC; hadleywickham",
+        "Author": "Hadley Wickham [aut, cre],\n  Posit, PBC [cph, fnd]",
+        "Maintainer": "Hadley Wickham <hadley@posit.co>",
+        "Repository": "RSPM",
+        "Date/Publication": "2023-08-15 09:00:02 UTC",
+        "Built": "R 4.4.0; ; 2024-04-25 19:47:21 UTC; unix",
+        "RemoteType": "standard",
+        "RemotePkgRef": "httr",
+        "RemoteRef": "httr",
+        "RemoteRepos": "https://p3m.dev/cran/__linux__/jammy/latest",
+        "RemotePkgPlatform": "x86_64-pc-linux-gnu-ubuntu-22.04",
+        "RemoteSha": "1.4.7"
+      }
+    },
     "httr2": {
       "Source": "github",
       "Repository": null,
@@ -1857,10 +1924,10 @@
         "GithubRef": "HEAD",
         "GithubSHA1": "7271bc88b879d4bbb8faa3269c2cebecccb7e04d",
         "NeedsCompilation": "no",
-        "Packaged": "2024-10-28 17:11:21 UTC; rstudio",
+        "Packaged": "2024-10-28 19:33:17 UTC; rstudio",
         "Author": "Hadley Wickham [aut, cre],\n  Posit Software, PBC [cph, fnd],\n  Maximilian Girlich [ctb]",
         "Maintainer": "Hadley Wickham <hadley@posit.co>",
-        "Built": "R 4.4.1; ; 2024-10-28 17:11:22 UTC; unix"
+        "Built": "R 4.4.1; ; 2024-10-28 19:33:18 UTC; unix"
       }
     },
     "ini": {
@@ -2453,6 +2520,42 @@
         "RemoteRepos": "https://p3m.dev/cran/__linux__/jammy/latest",
         "RemotePkgPlatform": "x86_64-pc-linux-gnu-ubuntu-22.04",
         "RemoteSha": "1.9.0"
+      }
+    },
+    "pins": {
+      "Source": "CRAN",
+      "Repository": "https://p3m.dev/cran/latest",
+      "description": {
+        "Type": "Package",
+        "Package": "pins",
+        "Title": "Pin, Discover, and Share Resources",
+        "Version": "1.4.0",
+        "Authors@R": "c(\n    person(\"Julia\", \"Silge\", , \"julia.silge@posit.co\", role = c(\"cre\", \"aut\"),\n           comment = c(ORCID = \"0000-0002-3671-836X\")),\n    person(\"Hadley\", \"Wickham\", , \"hadley@posit.co\", role = \"aut\",\n           comment = c(ORCID = \"0000-0003-4757-117X\")),\n    person(\"Javier\", \"Luraschi\", , \"jluraschi@gmail.com\", role = \"aut\"),\n    person(\"Posit Software, PBC\", role = c(\"cph\", \"fnd\"))\n  )",
+        "Description": "Publish data sets, models, and other R objects, making it\n    easy to share them across projects and with your colleagues. You can\n    pin objects to a variety of \"boards\", including local folders (to\n    share on a networked drive or with 'DropBox'), 'Posit Connect',\n    'AWS S3', and more.",
+        "License": "Apache License (>= 2)",
+        "URL": "https://pins.rstudio.com/, https://github.com/rstudio/pins-r",
+        "BugReports": "https://github.com/rstudio/pins-r/issues",
+        "Depends": "R (>= 3.6)",
+        "Imports": "cli, digest, fs, generics, glue, httr, jsonlite, lifecycle,\nmagrittr, purrr (>= 1.0.0), rappdirs, rlang (>= 1.1.0), tibble,\nwhisker, withr (>= 2.4.3), yaml",
+        "Suggests": "archive, arrow, AzureStor, covr, data.table, datasets,\nfilelock, gitcreds, googleCloudStorageR, googledrive, httr2,\nids, knitr, Microsoft365R, mime, mockery, nanoparquet, openssl,\npaws.storage, qs, R.utils, rmarkdown, rsconnect, shiny, sodium,\ntestthat (>= 3.1.7), webfakes (>= 1.2.0), xml2, zip",
+        "VignetteBuilder": "knitr",
+        "Config/Needs/website": "tidyverse/tidytemplate",
+        "Config/testthat/edition": "3",
+        "Encoding": "UTF-8",
+        "RoxygenNote": "7.3.2",
+        "NeedsCompilation": "no",
+        "Packaged": "2024-10-07 15:34:43 UTC; juliasilge",
+        "Author": "Julia Silge [cre, aut] (<https://orcid.org/0000-0002-3671-836X>),\n  Hadley Wickham [aut] (<https://orcid.org/0000-0003-4757-117X>),\n  Javier Luraschi [aut],\n  Posit Software, PBC [cph, fnd]",
+        "Maintainer": "Julia Silge <julia.silge@posit.co>",
+        "Repository": "RSPM",
+        "Date/Publication": "2024-10-07 16:00:03 UTC",
+        "Built": "R 4.4.0; ; 2024-10-08 04:11:25 UTC; unix",
+        "RemoteType": "standard",
+        "RemotePkgRef": "pins",
+        "RemoteRef": "pins",
+        "RemoteRepos": "https://p3m.dev/cran/__linux__/jammy/latest",
+        "RemotePkgPlatform": "x86_64-pc-linux-gnu-ubuntu-22.04",
+        "RemoteSha": "1.4.0"
       }
     },
     "pkgbuild": {
@@ -3447,6 +3550,39 @@
         "RemoteSha": "0.8.7"
       }
     },
+    "shinyjs": {
+      "Source": "CRAN",
+      "Repository": "https://p3m.dev/cran/latest",
+      "description": {
+        "Package": "shinyjs",
+        "Title": "Easily Improve the User Experience of Your Shiny Apps in Seconds",
+        "Version": "2.1.0",
+        "Authors@R": "person(\"Dean\", \"Attali\", \n    email = \"daattali@gmail.com\",\n    role = c(\"aut\", \"cre\"),\n    comment= c(ORCID=\"0000-0002-5645-3493\"))",
+        "Description": "Perform common useful JavaScript operations in Shiny apps that will\n    greatly improve your apps without having to know any JavaScript. Examples\n    include: hiding an element, disabling an input, resetting an input back to\n    its original value, delaying code execution by a few seconds, and many more\n    useful functions for both the end user and the developer. 'shinyjs' can also\n    be used to easily call your own custom JavaScript functions from R.",
+        "URL": "https://deanattali.com/shinyjs/",
+        "BugReports": "https://github.com/daattali/shinyjs/issues",
+        "Depends": "R (>= 3.1.0)",
+        "Imports": "digest (>= 0.6.8), jsonlite, shiny (>= 1.0.0)",
+        "Suggests": "htmltools (>= 0.2.9), knitr (>= 1.7), rmarkdown, shinyAce,\nshinydisconnect, testthat (>= 0.9.1)",
+        "License": "MIT + file LICENSE",
+        "VignetteBuilder": "knitr",
+        "RoxygenNote": "7.1.1",
+        "Encoding": "UTF-8",
+        "NeedsCompilation": "no",
+        "Packaged": "2021-12-21 11:32:22 UTC; Dean-X1C",
+        "Author": "Dean Attali [aut, cre] (<https://orcid.org/0000-0002-5645-3493>)",
+        "Maintainer": "Dean Attali <daattali@gmail.com>",
+        "Repository": "RSPM",
+        "Date/Publication": "2021-12-23 10:10:02 UTC",
+        "Built": "R 4.4.0; ; 2024-04-25 02:02:53 UTC; unix",
+        "RemoteType": "standard",
+        "RemotePkgRef": "shinyjs",
+        "RemoteRef": "shinyjs",
+        "RemoteRepos": "https://p3m.dev/cran/__linux__/jammy/latest",
+        "RemotePkgPlatform": "x86_64-pc-linux-gnu-ubuntu-22.04",
+        "RemoteSha": "2.1.0"
+      }
+    },
     "sourcetools": {
       "Source": "CRAN",
       "Repository": "https://p3m.dev/cran/latest",
@@ -4340,13 +4476,13 @@
   },
   "files": {
     ".devcontainer/vscode/devcontainer.json": {
-      "checksum": "0f59abcac22ee62db6895ad14f370a51"
+      "checksum": "54ff24bde3ce7ca456d20e1a22e95972"
     },
     ".Rbuildignore": {
       "checksum": "c30143635769222e58e5754763b21a04"
     },
     ".Renviron": {
-      "checksum": "764efb114c3e2a82cc8f1886edf42d12"
+      "checksum": "927bd731709c7884e8aaa28d3ab52b5e"
     },
     ".Rprofile": {
       "checksum": "bd6ba13862c364720b97fc54f7a3ec0d"
@@ -4355,7 +4491,7 @@
       "checksum": "8d190255444a76f635dda1ecbe37fb31"
     },
     "app.R": {
-      "checksum": "d456ef129e120c48c8211450db4becfc"
+      "checksum": "37d056b0c45515a1e0e80e469880f1f4"
     },
     "data/haunted_places.csv": {
       "checksum": "c0b7f5873c4818e1cf2af8eb76ed96de"
@@ -4367,7 +4503,10 @@
       "checksum": "894bfd937f253470d9840c39e23c1fab"
     },
     "DESCRIPTION": {
-      "checksum": "7cd25d1cf73c8042a636285ab772a670"
+      "checksum": "b8cc1e3141007ba4e86cc51dcf4cf4a3"
+    },
+    "inst/app/_auth0.yml": {
+      "checksum": "5d2e7b99722f944c0a8a85b0219b5fd8"
     },
     "inst/app/www/favicon.ico": {
       "checksum": "81560d1b906a530c87fa0acbb2f5cca4"
@@ -4409,13 +4548,34 @@
       "checksum": "fd09f30cbbc64202df1f2c17a2a9ff36"
     },
     "NAMESPACE": {
-      "checksum": "36f05c76c7149029c2f77b47dd8e3327"
+      "checksum": "d9fc0b2b95d5907cb8194236bc963fe8"
+    },
+    "prototyping/auth_stuff/auth0_connections_prev_app_1.png": {
+      "checksum": "3e66aecce7fd3516dd2ad238019bb69b"
+    },
+    "prototyping/auth_stuff/auth0_credentials_prev_app_1.png": {
+      "checksum": "c242fa9ddc4f8f0471abbefb910a14ac"
+    },
+    "prototyping/auth_stuff/auth0_settings_prev_app_1.png": {
+      "checksum": "a04e038a985234b656b169ff664a43a2"
+    },
+    "prototyping/auth_stuff/auth0_settings_prev_app_2.png": {
+      "checksum": "99d88d1953c02a627d1128f53373a089"
+    },
+    "prototyping/auth_stuff/auth0_settings_prev_app_3.png": {
+      "checksum": "d0c854d2ef8f4a4d820a2bb7c0608be5"
+    },
+    "prototyping/auth_stuff/auth0_settings_prev_app_4.png": {
+      "checksum": "f9977fac3b6bf5cd70d82bcbb7100a22"
     },
     "prototyping/explore_haunted_data.R": {
       "checksum": "874bfe38d2abe392c9610767e1d03546"
     },
     "prototyping/haunted_chat.R": {
       "checksum": "97117c0b0accfa48a5a2b728088e19b1"
+    },
+    "prototyping/pins_explore.R": {
+      "checksum": "5e09b14ff1a7b95d1422d771b228ea9c"
     },
     "prototyping/sample_app.R": {
       "checksum": "60168e2627dcc260e5b4fd73c5bbcb5f"
@@ -4427,10 +4587,13 @@
       "checksum": "fedd28d293ceaf43f3794ddaaba53e14"
     },
     "R/app_server.R": {
-      "checksum": "2ce1a8c04ccf79834766b01e4115c1e2"
+      "checksum": "8c8cec3b7773963b7499e4383c44a093"
     },
     "R/app_ui.R": {
-      "checksum": "e51d2cf2852f32c0020511fc3e1c354c"
+      "checksum": "b8f711a34ebbeb85916b78529750f561"
+    },
+    "R/mod_auth_info.R": {
+      "checksum": "61a9e214df33e09c0432679138f50ebb"
     },
     "R/mod_map.R": {
       "checksum": "fed32fb294ab1254a734946e9aa64d24"
@@ -4438,8 +4601,11 @@
     "R/mod_question.R": {
       "checksum": "b852b5ac05bced45d4b7878f4711c6a0"
     },
+    "R/run_app_auth0.R": {
+      "checksum": "d4c4e06ec287e992f17b4b1a8cf34b5f"
+    },
     "R/run_app.R": {
-      "checksum": "476011bbc4ffefa824e5bfb8386d849b"
+      "checksum": "f1503d23367ad7b757c74e4b95a791d9"
     },
     "R/utils.R": {
       "checksum": "e35e5cc7a87c3b40f57da61f10effa6c"
