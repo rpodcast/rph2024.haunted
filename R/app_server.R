@@ -6,7 +6,9 @@
 #' @import elmer
 #' @noRd
 app_server <- function(input, output, session) {
-  # Your application server logic
+  # execute authentication information module
+  user_info <- mod_auth_info_server("auth_info_1")
+
   # initialize chat bot
   chat <- chat_openai(
     model = "gpt-4o-mini",
@@ -97,12 +99,21 @@ app_server <- function(input, output, session) {
   })
 
   observeEvent(input$submit_answer, {
+    # obtain current time of submissions
+    current_time <- Sys.time()
+    current_submission_info_df <- current_question_df()() |>
+      dplyr::mutate(
+        user_nickname = user_info()$user_nickname,
+        user_name = user_info()$user_name,
+        user_picture = user_info()$user_picture,
+        submission_timestamp = current_time
+      )
     remove_trigger(runif(1))
     remove_locations(c(remove_locations(), selected_location()))
     user_question_df(
       dplyr::bind_rows(
         user_question_df(),
-        current_question_df()()
+        current_submission_info_df
       )
     )
     shiny::removeModal()

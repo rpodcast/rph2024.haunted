@@ -33,6 +33,7 @@ app_ui <- function(request) {
         full_screen = TRUE,
         mod_map_ui("map_1"),
       ),
+      #mod_auth_info_ui("auth_info_1"),
       uiOutput("description"),
       verbatimTextOutput("debug")
     )
