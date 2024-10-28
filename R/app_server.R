@@ -23,8 +23,6 @@ app_server <- function(input, output, session) {
   remove_locations <- reactiveVal(NULL)
   current_question_df <- reactiveVal(NULL)
   user_question_df <- reactiveVal(NULL)
-  #n_questions_submitted <- reactiveVal(0)
-  #n_questions_correct <- reactiveVal(0)
 
   # launch map module
   selected_location <- mod_map_server("map_1", haunted_df, remove_trigger)
@@ -35,7 +33,20 @@ app_server <- function(input, output, session) {
     dplyr::filter(haunted_df, location == selected_location())
   })
 
+  output$description <- renderUI({
+    req(haunted_subset_df())
+    card(
+      card_header(haunted_subset_df()$location),
+      full_screen = TRUE,
+      tags$p(haunted_subset_df()$description)
+    )
+  })
+
   observeEvent(input$launch_quiz_question, {
+    if (!shiny::isTruthy(haunted_subset_df())) {
+      message("Nothing selected!")
+      return(NULL)
+    }
     req(haunted_subset_df())
     message("begin question processing")
     user_prompt <- prepare_user_prompt(

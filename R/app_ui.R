@@ -10,14 +10,31 @@ app_ui <- function(request) {
     # Leave this function for adding external resources
     golem_add_external_resources(),
     # Your application UI logic
-    page_fluid(
-      mod_map_ui("map_1"),
-      actionButton(
-        "launch_quiz_question",
-        "Begin Question"
+    page_sidebar(
+      title = "R/Pharma 2024 Haunted Quiz!",
+      theme = bs_theme(
+        bootswatch = "sketchy",
+        base_font = font_google("Metal Mania")
       ),
+      sidebar = sidebar(
+        title = "More Information",
+        open = FALSE,
+        "More to come"
+      ),
+      card(
+        card_header(
+          class = "d-flex justify-content-between",
+          "Choose your Haunted Place!",
+          actionButton(
+            "launch_quiz_question",
+            "Begin Question"
+          )
+        ),
+        full_screen = TRUE,
+        mod_map_ui("map_1"),
+      ),
+      uiOutput("description"),
       verbatimTextOutput("debug")
-      #golem::golem_welcome_page() # Remove this line to start building your UI
     )
   )
 }
