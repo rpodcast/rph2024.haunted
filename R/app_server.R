@@ -10,7 +10,7 @@ app_server <- function(input, output, session) {
   user_info <- mod_auth_info_server("auth_info_1")
 
   # initialize chat bot
-  chat <- chat_openai(
+  chat <- elmer::chat_openai(
     model = "gpt-4o-mini",
     system_prompt = import_prompt_file(),
     echo = FALSE
