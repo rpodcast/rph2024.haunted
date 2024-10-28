@@ -10,6 +10,7 @@
 #' @importFrom shinyWidgets prettyRadioButtons
 mod_question_ui <- function(
   id,
+  location,
   quiz_question_text,
   correct_answer,
   incorrect_answer_1,
@@ -31,10 +32,11 @@ mod_question_ui <- function(
   tagList(
     prettyRadioButtons(
       ns("question"),
-      label = quiz_question_text,
+      label = glue::glue("{location}: {quiz_question_text}"),
       choices = quiz_choices,
       selected = NULL,
       icon = icon("skull"),
+      width = "100%",
       bigger = TRUE
     )
   )
@@ -45,6 +47,7 @@ mod_question_ui <- function(
 #' @noRd 
 mod_question_server <- function(
   id,
+  location,
   quiz_question_text,
   correct_answer,
   incorrect_answer_1,
@@ -54,13 +57,28 @@ mod_question_server <- function(
   moduleServer(id, function(input, output, session){
     ns <- session$ns
 
-    # return selected answer from user
+    # selected answer from user
     user_answer <- reactive({
       req(input$question)
       input$question
     })
 
-    user_answer
+    # return data frame of question and user answer
+    submission_df <- reactive({
+      req(user_answer())
+      tibble::tibble(
+        location = location,
+        quiz_question_text = quiz_question_text,
+        correct_answer = correct_answer,
+        user_answer = user_answer(),
+        incorrect_answer_1 = incorrect_answer_1,
+        incorrect_answer_2 = incorrect_answer_2,
+        incorrect_answer_3 = incorrect_answer_3,
+        result = (user_answer == correct_answer)
+      )
+    })
+
+    submission_df
   })
 }
     
