@@ -17,6 +17,8 @@ count_words <- function(x) {
 #' @return duckplyr tibble of process haunted places data frame
 #' @import duckplyr
 process_haunted_data <- function() {
+  # define vector of icon types
+  map_icon_choices <- c("castle", "dracula", "ghost_face", "ghost", "pumpkin", "skeleton", "witch_hat", "zombie_hand")
   haunted_df <- duckplyr_df_from_csv("inst/extdata/haunted_places.csv") |>
     mutate(n_words = count_words(description), .by = c(state_abbrev, city, location, description)) |>
     arrange(state_abbrev, city, desc(n_words)) |>
@@ -27,8 +29,9 @@ process_haunted_data <- function() {
       longitude = ifelse(is.na(longitude), city_longitude, longitude)
     ) |>
     filter(n_words >= 100) |>
-    slice_max(n_words, n = 5, by = state_abbrev)
-    #slice_max(n_words, n = 1, by = c(state_abbrev, city, location))
+    slice_max(n_words, n = 5, by = state_abbrev) |>
+    mutate(city = stringr::str_remove_all(city, "\n")) |>
+    mutate(icon_type = sample(map_icon_choices, 1), .by = location)
 }
 
 #' Import quiz question from JSON input
@@ -43,6 +46,9 @@ process_haunted_data <- function() {
 #' * incorrect_choice_2
 #' * incorrect_choice_3
 import_quiz_question <- function(txt) {
+  # sanitize text since it is coming back as a markdown code snippet
+  txt <- stringr::str_remove_all(txt, "```json")
+  txt <- stringr::str_remove_all(txt, "``")
   jsonlite::fromJSON(txt = txt)
 }
 

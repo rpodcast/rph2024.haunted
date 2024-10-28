@@ -25,6 +25,15 @@ library(rph2024.haunted)
 ## basic example code
 ```
 
+## Credits & Attribution
+
+<a href="https://www.flaticon.com/free-icons/halloween" title="halloween icons">Halloween icons created by Good Ware - Flaticon</a>
+
+<a href="https://www.flaticon.com/free-icons/creepy" title="creepy icons">Creepy icons created by Freepik - Flaticon</a>
+
+<a href="https://www.flaticon.com/free-icons/vampire" title="vampire icons">Vampire icons created by Umeicon - Flaticon</a>
+
 ## Code of Conduct
 
 Please note that the rph2024.haunted project is released with a [Contributor Code of Conduct](https://contributor-covenant.org/version/2/1/CODE_OF_CONDUCT.html). By contributing to this project, you agree to abide by its terms.
+
