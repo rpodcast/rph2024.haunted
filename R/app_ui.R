@@ -24,7 +24,7 @@ app_ui <- function(request) {
       card(
         card_header(
           class = "d-flex justify-content-between",
-          "Choose your Haunted Place!",
+          uiOutput("show_user_name"),
           actionButton(
             "launch_quiz_question",
             "Begin Question"

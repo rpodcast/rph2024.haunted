@@ -35,6 +35,11 @@ app_server <- function(input, output, session) {
     dplyr::filter(haunted_df, location == selected_location())
   })
 
+  output$show_user_name <- renderUI({
+    req(user_info())
+    glue::glue("Welcome, {user_info()$user_name}! Choose a Haunted Place ... If You Dare!")
+  })
+
   output$description <- renderUI({
     req(haunted_subset_df())
     card(
