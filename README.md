@@ -39,6 +39,7 @@ Tidy Tuesday data set <https://github.com/rfordatascience/tidytuesday/tree/43829
 
 * https://www.creativeboom.com/resources/frightfully-free-fonts-6-google-fonts-for-halloween-themed-designs/
 
+* https://namesbudy.com/alias-names/halloween-nicknames/
 
 ## Code of Conduct
 
