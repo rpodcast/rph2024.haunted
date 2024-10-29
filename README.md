@@ -27,11 +27,18 @@ library(rph2024.haunted)
 
 ## Credits & Attribution
 
+Tidy Tuesday data set <https://github.com/rfordatascience/tidytuesday/tree/438293a970874a9b73c42bf58518f7dfe059fb29/data/2023/2023-10-10>
+
 <a href="https://www.flaticon.com/free-icons/halloween" title="halloween icons">Halloween icons created by Good Ware - Flaticon</a>
 
 <a href="https://www.flaticon.com/free-icons/creepy" title="creepy icons">Creepy icons created by Freepik - Flaticon</a>
 
 <a href="https://www.flaticon.com/free-icons/vampire" title="vampire icons">Vampire icons created by Umeicon - Flaticon</a>
+
+## Assorted Resources
+
+* https://www.creativeboom.com/resources/frightfully-free-fonts-6-google-fonts-for-halloween-themed-designs/
+
 
 ## Code of Conduct
 

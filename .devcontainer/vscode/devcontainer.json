@@ -13,7 +13,7 @@
     // Additional R packages
     // config: https://github.com/rocker-org/devcontainer-features/tree/main/src/r-packages/README.md
     "ghcr.io/rocker-org/devcontainer-features/r-packages:1": {
-      "packages": "github::jcheng5/shinychat,github::hadley/elmer,dotenv,bslib,DBI,reactable,leaflet,dplyr,tidyr,purrr,duckplyr,reactablefmtr,anytime,dbplyr,golem,config,glue,jsonlite,stringr,shiny,usethis,devtools,attachment,testthat,ggplot2,languageserver,magick,auth0,pool,bsicons,base64enc,plotly,shinyWidgets,rsconnect,pins,cpp11,paws.storage",
+      "packages": "github::jcheng5/shinychat,github::hadley/elmer,dotenv,bslib,DBI,reactable,leaflet,dplyr,tidyr,purrr,duckplyr,reactablefmtr,anytime,dbplyr,golem,config,glue,jsonlite,stringr,shiny,usethis,devtools,attachment,testthat,ggplot2,languageserver,magick,auth0,pool,bsicons,base64enc,plotly,shinyWidgets,rsconnect,pins,cpp11,paws.storage,dockerfiler",
       "installSystemRequirements": true
     },
     // Python

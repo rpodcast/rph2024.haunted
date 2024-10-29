@@ -1,0 +1,4 @@
+docker build -f Dockerfile_base --progress=plain -t rph2024.haunted_base .
+docker build -f Dockerfile --progress=plain -t rph2024.haunted:latest .
+docker run -p 80:80 rph2024.haunted:latest
+# then go to 127.0.0.1:80
