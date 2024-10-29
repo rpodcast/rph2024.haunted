@@ -70,20 +70,78 @@ docker run --env-file .env -p 7771:80 rpodcast/rph2024.haunted:latest
 
 In a web browser, visit `http://localhost:7771`.
 
+**SIDE NOTE**: If you encounter errors or other issues with the app, here's a general procedure for debugging:
+
+* Stop the docker container
+
+```
+# find the container friendly name
+docker ps
+
+docker stop <container_friendly_name>
+```
+
+* Modify source code of application as needed. Ensure that you bump the package version in `DESCRIPTION` either manually or running `usethis::use_version("dev", push = FALSE)`.
+* Run these snippets from `dev/03_deploy.R` to refresh package build
+
+```r
+# dev/03_deploy.R
+unlink("dev/deploy/*.tar.gz")
+devtools::build(path = "dev/deploy")
+```
+
+* Re-build the second Docker container image
+
+```
+docker build -f Dockerfile --progress=plain -t rpodcast/rph2024.haunted:latest .
+```
+
+* Run the container again
+
+```
+docker run --env-file .env -p 7771:80 rpodcast/rph2024.haunted:latest
+```
+
 ### Push Docker Images to Dockerhub
 
-Push to Docker Hub:
+Ensure that you are able to push to Docker Hub by running the following command to log in to the service and set credentials for future operations:
 
 ```
-docker push rpodcast/rph2023.breakapp_base
+docker login -u rpodcast
 ```
 
-
-Push to Docker Hub:
+Once the login is successful run the following:
 
 ```
-docker push rpodcast/rph2023.breakapp
+# Push first container image
+docker push rpodcast/rph2024.haunted_base
+
+# Push second container image
+docker push rpodcast/rph2024.haunted
 ```
 
-Deployment to fly.io
+## App Deployment
 
+Procedure adapted from <https://hosting.analythium.io/make-your-shiny-app-fly/>
+
+1. Install the `flyctl` command line tool
+1. Authenticate to the service using this command:
+
+```
+flyctl auth login
+```
+
+1. Launch application on service
+
+```
+flyctl launch --image rpodcast/rph2024.haunted:latest
+```
+
+2. After deployment is complete, you need to add the environment variables using following commands (repeat for each variable until I find a better way):
+
+```
+fly secrets set OPENAI_API_KEY=changeme
+fly secrets set AUTH0_USER=changeme
+fly secrets set AUTH0_KEY=changeme
+fly secrets set AUTH0_SECRET=changeme
+```
