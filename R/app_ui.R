@@ -37,9 +37,8 @@ app_ui <- function(request) {
         mod_map_ui("map_1"),
         class = "card_map"
       ),
-      #mod_auth_info_ui("auth_info_1"),
-      uiOutput("description"),
-      verbatimTextOutput("debug")
+      uiOutput("status"),
+      uiOutput("description")
     )
   )
 }

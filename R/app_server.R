@@ -130,12 +130,20 @@ app_server <- function(input, output, session) {
   })
 
   n_questions_correct <- reactive({
-    req(user_question_df())
-    sum(user_question_df()$result)
+    #req(user_question_df())
+    if (is.null(user_question_df())) {
+      return(0)
+    } else {
+      return(sum(user_question_df()$result))
+    }
   })
 
-  output$debug <- renderPrint({
-    req(user_question_df())
-    user_question_df()
+  output$status <- renderUI({
+    if (is.null(user_question_df())) {
+      text <- "Don't be scared ... enter a haunted place and begin!"
+    } else {
+      text <- glue::glue("Escape Attempts: {n_questions_submitted()}         Successful Escapes: {n_questions_correct()}")
+    }
+    h2(text)
   })
 }
