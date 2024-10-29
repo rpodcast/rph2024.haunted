@@ -15,9 +15,11 @@ app_ui <- function(request) {
       title = "R/Pharma 2024 Haunted Quiz!",
       theme = bs_theme(
         bootswatch = "sketchy",
-        base_font = font_google("Metal Mania"),
+        #base_font = font_google("Metal Mania"),
+        base_font = font_google("Underdog"),
+        heading_font = font_google("Underdog"),
         bg = "#2d1d47",
-        fg = "#f3a920f3"
+        fg = "#e7a11ef3"
       ),
       sidebar = sidebar(
         title = "More Information",
