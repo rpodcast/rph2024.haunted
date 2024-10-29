@@ -4,6 +4,7 @@
 #'     DO NOT REMOVE.
 #' @import shiny
 #' @import bslib
+#' @importFrom markdown markdownToHTML
 #' @noRd
 app_ui <- function(request) {
   tagList(
@@ -21,7 +22,10 @@ app_ui <- function(request) {
       sidebar = sidebar(
         title = "More Information",
         open = FALSE,
-        "More to come"
+        width = 350,
+        htmltools::includeMarkdown(
+          system.file("docs", "sidebar.md", package = "rph2024.haunted")
+        )
       ),
       card(
         card_header(
