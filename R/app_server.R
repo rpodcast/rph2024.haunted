@@ -4,6 +4,7 @@
 #'     DO NOT REMOVE.
 #' @import shiny
 #' @import elmer
+#' @importFrom markdown markdownToHTML
 #' @noRd
 app_server <- function(input, output, session) {
   # execute authentication information module
@@ -20,6 +21,7 @@ app_server <- function(input, output, session) {
   haunted_df <- process_haunted_data()
 
   # reactive values used in app logic
+  start_app <- reactiveVal(TRUE)
   current_question <- reactiveVal(NULL)
   remove_trigger <- reactiveVal(NULL)
   remove_locations <- reactiveVal(NULL)
@@ -28,6 +30,21 @@ app_server <- function(input, output, session) {
 
   # launch map module
   selected_location <- mod_map_server("map_1", haunted_df, remove_trigger)
+
+  # Show welcome popup
+  observeEvent(start_app(), {
+    shiny::showModal(
+      shiny::modalDialog(
+        htmltools::includeMarkdown(
+          system.file("docs", "welcome.md", package = "rph2024.haunted")
+        ),
+        title = NULL,
+        easyClose = TRUE,
+        footer = shiny::modalButton("I am Ready!"),
+        size = "xl"
+      )
+    )
+  })
 
   # reactive for filtered data based on selection
   haunted_subset_df <- reactive({
