@@ -23,10 +23,11 @@ mod_auth_info_server <- function(id){
  
     user_info <- reactive({
       if (getOption("auth0_disable")) {
+        funny_name <- random_name()
         info <- list(
           sub = "devaccount|8675309",
-          nickname = "the_blue_robot",
-          name = "MegaMan",
+          nickname = funny_name,
+          name = funny_name,
           picture = "https://shinydevseries-assets.us-east-1.linodeobjects.com/megaman.png"
         )
       } else {

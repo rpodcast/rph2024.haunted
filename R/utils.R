@@ -7,6 +7,14 @@ import_prompt_file <- function() {
   return(system_prompt_str)
 }
 
+random_name <- function() {
+  name_list <- readLines(
+    system.file("docs", "random_names.txt", package = "rph2024.haunted"),
+    warn = FALSE
+  )
+  sample(name_list, 1)
+}
+
 count_words <- function(x) {
   words <- stringr::str_split(x, "\\s+")[[1]]
   word_count <- length(words)
