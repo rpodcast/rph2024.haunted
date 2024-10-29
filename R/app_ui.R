@@ -16,8 +16,8 @@ app_ui <- function(request) {
       theme = bs_theme(
         bootswatch = "sketchy",
         base_font = font_google("Metal Mania"),
-        bg = "#432a6f",
-        fg = "#35d82cf3"
+        bg = "#2d1d47",
+        fg = "#f3a920f3"
       ),
       sidebar = sidebar(
         title = "More Information",
