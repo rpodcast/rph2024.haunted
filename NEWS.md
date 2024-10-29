@@ -1,3 +1,3 @@
 # rph2024.haunted (development version)
 
-* Initial CRAN submission.
+* MVP of app
