@@ -1,5 +1,8 @@
 import_prompt_file <- function() {
-  prompt_content <- readLines("inst/docs/prompt.md", warn = FALSE)
+  prompt_content <- readLines(
+    system.file("docs", "prompt.md", package = "rph2024.haunted"),
+    warn = FALSE
+  )
   system_prompt_str <- paste(prompt_content, collapse = "\n")
   return(system_prompt_str)
 }
@@ -19,7 +22,10 @@ count_words <- function(x) {
 process_haunted_data <- function() {
   # define vector of icon types
   map_icon_choices <- c("castle", "dracula", "ghost_face", "ghost", "pumpkin", "skeleton", "witch_hat", "zombie_hand")
-  haunted_df <- duckplyr_df_from_csv("inst/extdata/haunted_places.csv") |>
+  #haunted_df <- duckplyr_df_from_csv("inst/extdata/haunted_places.csv")
+  haunted_df <- duckplyr_df_from_csv(
+    system.file("extdata", "haunted_places.csv", package = "rph2024.haunted")
+  ) |>
     mutate(n_words = count_words(description), .by = c(state_abbrev, city, location, description)) |>
     arrange(state_abbrev, city, desc(n_words)) |>
     filter(!(is.na(city_latitude) & is.na(latitude))) |>
