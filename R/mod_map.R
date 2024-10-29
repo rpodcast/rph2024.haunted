@@ -33,42 +33,50 @@ mod_map_server <- function(
     icon_path <- "inst/app/www/map_icons"
     map_icons <- iconList(
       castle = makeIcon(
-        iconUrl = fs::path(icon_path, "castle.png"),
+        iconUrl <- system.file("app", "www", "map_icons", "castle.png", package = "rph2024.haunted"),
+        #iconUrl = fs::path(icon_path, "castle.png"),
         iconWidth = 32,
         iconHeight = 32
       ),
       dracula = makeIcon(
-        iconUrl = fs::path(icon_path, "dracula.png"),
+        iconUrl <- system.file("app", "www", "map_icons", "dracula.png", package = "rph2024.haunted"),
+        #iconUrl = fs::path(icon_path, "dracula.png"),
         iconWidth = 32,
         iconHeight = 32
       ),
       ghost_face = makeIcon(
-        iconUrl = fs::path(icon_path, "ghost-face.png"),
+        iconUrl <- system.file("app", "www", "map_icons", "ghost-face.png", package = "rph2024.haunted"),
+        #iconUrl = fs::path(icon_path, "ghost-face.png"),
         iconWidth = 32,
         iconHeight = 32
       ),
       ghost = makeIcon(
-        iconUrl = fs::path(icon_path, "ghost.png"),
+        iconUrl <- system.file("app", "www", "map_icons", "ghost.png", package = "rph2024.haunted"),
+        #iconUrl = fs::path(icon_path, "ghost.png"),
         iconWidth = 32,
         iconHeight = 32
       ),
       pumpkin = makeIcon(
-        iconUrl = fs::path(icon_path, "pumpkin.png"),
+        iconUrl <- system.file("app", "www", "map_icons", "pumpkin.png", package = "rph2024.haunted"),
+        #iconUrl = fs::path(icon_path, "pumpkin.png"),
         iconWidth = 32,
         iconHeight = 32
       ),
       skeleton = makeIcon(
-        iconUrl = fs::path(icon_path, "skeleton.png"),
+        iconUrl <- system.file("app", "www", "map_icons", "skeleton.png", package = "rph2024.haunted"),
+        #iconUrl = fs::path(icon_path, "skeleton.png"),
         iconWidth = 32,
         iconHeight = 32
       ),
       witch_hat = makeIcon(
-        iconUrl = fs::path(icon_path, "witch-hat.png"),
+        iconUrl <- system.file("app", "www", "map_icons", "witch-hat.png", package = "rph2024.haunted"),
+        #iconUrl = fs::path(icon_path, "witch-hat.png"),
         iconWidth = 32,
         iconHeight = 32
       ),
       zombie_hand = makeIcon(
-        iconUrl = fs::path(icon_path, "zombie_hand.png"),
+        iconUrl <- system.file("app", "www", "map_icons", "zombie_hand.png", package = "rph2024.haunted"),
+        #iconUrl = fs::path(icon_path, "zombie_hand.png"),
         iconWidth = 32,
         iconHeight = 32
       )

@@ -1,6 +1,6 @@
 Package: rph2024.haunted
 Title: Haunted Places Quiz Shiny App
-Version: 0.0.0.9003
+Version: 0.0.0.9004
 Authors@R: 
     person("Eric", "Nantz", , "theRcast@gmail.com", role = c("aut", "cre"))
 Description: A Shiny Application to test your knowledge to escape haunted
