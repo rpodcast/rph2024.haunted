@@ -1251,16 +1251,16 @@
         "RemoteUsername": "hadley",
         "RemotePkgRef": "github::hadley/elmer",
         "RemoteRef": "HEAD",
-        "RemoteSha": "79803f197994ccd7ba88d73b7b12245dbbb60a6c",
+        "RemoteSha": "8b62b1c4277798e7e4d2b2229ab9799b66bf2e18",
         "GithubRepo": "elmer",
         "GithubUsername": "hadley",
         "GithubRef": "HEAD",
-        "GithubSHA1": "79803f197994ccd7ba88d73b7b12245dbbb60a6c",
+        "GithubSHA1": "8b62b1c4277798e7e4d2b2229ab9799b66bf2e18",
         "NeedsCompilation": "no",
-        "Packaged": "2024-10-28 19:33:22 UTC; rstudio",
+        "Packaged": "2024-10-29 12:43:07 UTC; rstudio",
         "Author": "Hadley Wickham [aut, cre],\n  Posit Software, PBC [cph, fnd]",
         "Maintainer": "Hadley Wickham <hadley@posit.co>",
-        "Built": "R 4.4.1; ; 2024-10-28 19:33:22 UTC; unix"
+        "Built": "R 4.4.1; ; 2024-10-29 12:43:07 UTC; unix"
       }
     },
     "evaluate": {
@@ -1924,10 +1924,10 @@
         "GithubRef": "HEAD",
         "GithubSHA1": "7271bc88b879d4bbb8faa3269c2cebecccb7e04d",
         "NeedsCompilation": "no",
-        "Packaged": "2024-10-28 19:33:17 UTC; rstudio",
+        "Packaged": "2024-10-29 12:43:01 UTC; rstudio",
         "Author": "Hadley Wickham [aut, cre],\n  Posit Software, PBC [cph, fnd],\n  Maximilian Girlich [ctb]",
         "Maintainer": "Hadley Wickham <hadley@posit.co>",
-        "Built": "R 4.4.1; ; 2024-10-28 19:33:18 UTC; unix"
+        "Built": "R 4.4.1; ; 2024-10-29 12:43:02 UTC; unix"
       }
     },
     "ini": {
@@ -2324,6 +2324,39 @@
         "RemoteRepos": "https://p3m.dev/cran/__linux__/jammy/latest",
         "RemotePkgPlatform": "x86_64-pc-linux-gnu-ubuntu-22.04",
         "RemoteSha": "2.0.3"
+      }
+    },
+    "markdown": {
+      "Source": "CRAN",
+      "Repository": "https://p3m.dev/cran/latest",
+      "description": {
+        "Package": "markdown",
+        "Type": "Package",
+        "Title": "Render Markdown with 'commonmark'",
+        "Version": "1.13",
+        "Authors@R": "c(\n   person(\"Yihui\", \"Xie\", role = c(\"aut\", \"cre\"), email = \"xie@yihui.name\", comment = c(ORCID = \"0000-0003-0645-5666\")),\n   person(\"JJ\", \"Allaire\", role = \"aut\"),\n   person(\"Jeffrey\", \"Horner\", role = \"aut\"),\n   person(\"Henrik\", \"Bengtsson\", role = \"ctb\"),\n   person(\"Jim\", \"Hester\", role = \"ctb\"),\n   person(\"Yixuan\", \"Qiu\", role = \"ctb\"),\n   person(\"Kohske\", \"Takahashi\", role = \"ctb\"),\n   person(\"Adam\", \"November\", role = \"ctb\"),\n   person(\"Nacho\", \"Caballero\", role = \"ctb\"),\n   person(\"Jeroen\", \"Ooms\", role = \"ctb\"),\n   person(\"Thomas\", \"Leeper\", role = \"ctb\"),\n   person(\"Joe\", \"Cheng\", role = \"ctb\"),\n   person(\"Andrzej\", \"Oles\", role = \"ctb\"),\n   person(given = \"Posit Software, PBC\", role = c(\"cph\", \"fnd\"))\n   )",
+        "Description": "Render Markdown to full and lightweight HTML/LaTeX documents with\n    the 'commonmark' package. This package has been superseded by 'litedown'.",
+        "Depends": "R (>= 2.11.1)",
+        "Imports": "utils, commonmark (>= 1.9.0), xfun (>= 0.38)",
+        "Suggests": "knitr, rmarkdown (>= 2.18), yaml, RCurl",
+        "License": "MIT + file LICENSE",
+        "URL": "https://github.com/rstudio/markdown",
+        "BugReports": "https://github.com/rstudio/markdown/issues",
+        "RoxygenNote": "7.3.1",
+        "Encoding": "UTF-8",
+        "NeedsCompilation": "no",
+        "Packaged": "2024-06-04 15:36:56 UTC; yihui",
+        "Author": "Yihui Xie [aut, cre] (<https://orcid.org/0000-0003-0645-5666>),\n  JJ Allaire [aut],\n  Jeffrey Horner [aut],\n  Henrik Bengtsson [ctb],\n  Jim Hester [ctb],\n  Yixuan Qiu [ctb],\n  Kohske Takahashi [ctb],\n  Adam November [ctb],\n  Nacho Caballero [ctb],\n  Jeroen Ooms [ctb],\n  Thomas Leeper [ctb],\n  Joe Cheng [ctb],\n  Andrzej Oles [ctb],\n  Posit Software, PBC [cph, fnd]",
+        "Maintainer": "Yihui Xie <xie@yihui.name>",
+        "Repository": "RSPM",
+        "Date/Publication": "2024-06-04 20:50:02 UTC",
+        "Built": "R 4.4.0; ; 2024-06-05 11:46:17 UTC; unix",
+        "RemoteType": "standard",
+        "RemotePkgRef": "markdown",
+        "RemoteRef": "markdown",
+        "RemoteRepos": "https://p3m.dev/cran/__linux__/jammy/latest",
+        "RemotePkgPlatform": "x86_64-pc-linux-gnu-ubuntu-22.04",
+        "RemoteSha": "1.13"
       }
     },
     "memoise": {
@@ -4476,10 +4509,10 @@
   },
   "files": {
     ".devcontainer/vscode/devcontainer.json": {
-      "checksum": "54ff24bde3ce7ca456d20e1a22e95972"
+      "checksum": "1deaec6fed952e5c40202c36fe18a810"
     },
     ".Rbuildignore": {
-      "checksum": "c30143635769222e58e5754763b21a04"
+      "checksum": "bcdb8f11f9dca9cc44b4d5c12d54c00f"
     },
     ".Renviron": {
       "checksum": "927bd731709c7884e8aaa28d3ab52b5e"
@@ -4491,7 +4524,7 @@
       "checksum": "8d190255444a76f635dda1ecbe37fb31"
     },
     "app.R": {
-      "checksum": "37d056b0c45515a1e0e80e469880f1f4"
+      "checksum": "77f86723c0a24bb07c3632d95f82baf6"
     },
     "data/haunted_places.csv": {
       "checksum": "c0b7f5873c4818e1cf2af8eb76ed96de"
@@ -4503,10 +4536,13 @@
       "checksum": "894bfd937f253470d9840c39e23c1fab"
     },
     "DESCRIPTION": {
-      "checksum": "b8cc1e3141007ba4e86cc51dcf4cf4a3"
+      "checksum": "788d4ac2aeffdc5d1b8174b941345f0d"
     },
     "inst/app/_auth0.yml": {
       "checksum": "5d2e7b99722f944c0a8a85b0219b5fd8"
+    },
+    "inst/app/www/custom.css": {
+      "checksum": "0bb0ecc0828004a5210c970844926002"
     },
     "inst/app/www/favicon.ico": {
       "checksum": "81560d1b906a530c87fa0acbb2f5cca4"
@@ -4535,20 +4571,29 @@
     "inst/app/www/map_icons/zombie_hand.png": {
       "checksum": "5890f00758a49553f9e1b3735ae88510"
     },
+    "inst/app/www/map.png": {
+      "checksum": "a995cfafb12b56da9354f71bd6672532"
+    },
     "inst/docs/prompt_extra.md": {
       "checksum": "5619e68814be37a8cce7e5df1052013d"
     },
     "inst/docs/prompt.md": {
       "checksum": "9a882bf5be24c39ad1580e941e02fd83"
     },
+    "inst/docs/sidebar.md": {
+      "checksum": "764192296e4b2b17131ddd101ae89e5c"
+    },
+    "inst/docs/welcome.md": {
+      "checksum": "2f8a7f10d274bf5450c927435f7fe14d"
+    },
     "inst/extdata/haunted_places.csv": {
       "checksum": "c0b7f5873c4818e1cf2af8eb76ed96de"
     },
     "inst/golem-config.yml": {
-      "checksum": "fd09f30cbbc64202df1f2c17a2a9ff36"
+      "checksum": "e83cc18235d16e38246753b875e4865b"
     },
     "NAMESPACE": {
-      "checksum": "d9fc0b2b95d5907cb8194236bc963fe8"
+      "checksum": "46d89129656f24ede593c76b8ae45206"
     },
     "prototyping/auth_stuff/auth0_connections_prev_app_1.png": {
       "checksum": "3e66aecce7fd3516dd2ad238019bb69b"
@@ -4567,6 +4612,21 @@
     },
     "prototyping/auth_stuff/auth0_settings_prev_app_4.png": {
       "checksum": "f9977fac3b6bf5cd70d82bcbb7100a22"
+    },
+    "prototyping/deploy/Dockerfile": {
+      "checksum": "e97de37777f2c0099b150a7195297b15"
+    },
+    "prototyping/deploy/Dockerfile_base": {
+      "checksum": "a414bf8c888c6ca94f8a0b8fb0b39c45"
+    },
+    "prototyping/deploy/README": {
+      "checksum": "056e0b111938040b6f343df8999fca95"
+    },
+    "prototyping/deploy/renv.lock.prod": {
+      "checksum": "b074bb5cf73f22f38699068946d64c0d"
+    },
+    "prototyping/deploy/rph2024.haunted_0.0.0.9000.tar.gz": {
+      "checksum": "c06f2e3f0488b530dc734bc80c0018ab"
     },
     "prototyping/explore_haunted_data.R": {
       "checksum": "874bfe38d2abe392c9610767e1d03546"
@@ -4587,28 +4647,28 @@
       "checksum": "fedd28d293ceaf43f3794ddaaba53e14"
     },
     "R/app_server.R": {
-      "checksum": "8c8cec3b7773963b7499e4383c44a093"
+      "checksum": "cc6bce9cc094ee1e8b4558401a7e3d5e"
     },
     "R/app_ui.R": {
-      "checksum": "b8f711a34ebbeb85916b78529750f561"
+      "checksum": "5ebb21b381614bfeb812f33f20a5bb21"
     },
     "R/mod_auth_info.R": {
       "checksum": "61a9e214df33e09c0432679138f50ebb"
     },
     "R/mod_map.R": {
-      "checksum": "fed32fb294ab1254a734946e9aa64d24"
+      "checksum": "dbc056a727c9b2e377ee1d6520e73529"
     },
     "R/mod_question.R": {
       "checksum": "b852b5ac05bced45d4b7878f4711c6a0"
     },
     "R/run_app_auth0.R": {
-      "checksum": "d4c4e06ec287e992f17b4b1a8cf34b5f"
+      "checksum": "f2ebd3cce2946be14b1f8c9f6c6bf6c9"
     },
     "R/run_app.R": {
-      "checksum": "f1503d23367ad7b757c74e4b95a791d9"
+      "checksum": "56b2b465c259f5df0f0b5930f0b0bf11"
     },
     "R/utils.R": {
-      "checksum": "e35e5cc7a87c3b40f57da61f10effa6c"
+      "checksum": "b5a496802345ea1443dfa689061c790c"
     }
   },
   "users": null
