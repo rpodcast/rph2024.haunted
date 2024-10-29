@@ -22,11 +22,11 @@ devtools::check()
 ## Local, CRAN or Package Manager ----
 ## This will build a tar.gz that can be installed locally,
 ## sent to CRAN, or to a package manager
-devtools::build()
+devtools::build(path = "dev/deploy")
 
 ## Docker ----
 ## If you want to deploy via a generic Dockerfile
-golem::add_dockerfile_with_renv()
+golem::add_dockerfile_with_renv(output_dir = "dev/deploy")
 ## If you want to deploy to ShinyProxy
 golem::add_dockerfile_with_renv_shinyproxy()
 
