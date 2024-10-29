@@ -22,7 +22,7 @@ run_app <- function(
       options = options,
       enableBookmarking = enableBookmarking,
       uiPattern = uiPattern,
-      config_file = "inst/app/_auth0.yml"
+      config_file = system.file('app/_auth0.yml', package = 'rph2024.haunted')
     ),
     golem_opts = list(...)
   )
