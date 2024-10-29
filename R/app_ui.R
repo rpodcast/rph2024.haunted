@@ -14,7 +14,9 @@ app_ui <- function(request) {
       title = "R/Pharma 2024 Haunted Quiz!",
       theme = bs_theme(
         bootswatch = "sketchy",
-        base_font = font_google("Metal Mania")
+        base_font = font_google("Metal Mania"),
+        bg = "#432a6f",
+        fg = "#35d82cf3"
       ),
       sidebar = sidebar(
         title = "More Information",
@@ -23,15 +25,17 @@ app_ui <- function(request) {
       ),
       card(
         card_header(
-          class = "d-flex justify-content-between",
+          class = "bg-dark d-flex justify-content-between",
           uiOutput("show_user_name"),
           actionButton(
             "launch_quiz_question",
-            "Begin Question"
+            "Begin Question",
+            class = "btn-danger"
           )
         ),
         full_screen = TRUE,
         mod_map_ui("map_1"),
+        class = "card_map"
       ),
       #mod_auth_info_ui("auth_info_1"),
       uiOutput("description"),
