@@ -9,7 +9,6 @@ run_app(
   options = list(),
   enableBookmarking = NULL,
   uiPattern = "/",
-  use_auth0 = TRUE,
   ...
 )
 }
@@ -34,10 +33,10 @@ request to determine whether the \code{ui} should be used to handle the
 request. Note that the entire request path must match the regular
 expression in order for the match to be considered successful.}
 
-\item{use_auth0}{toggle to use auth0 version of app. Default is TRUE.}
-
 \item{...}{arguments to pass to golem_opts.
 See `?golem::get_golem_options` for more details.}
+
+\item{use_auth0}{toggle to use auth0 version of app. Default is TRUE.}
 }
 \description{
 Run the Shiny Application

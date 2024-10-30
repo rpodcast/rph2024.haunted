@@ -17,4 +17,8 @@ golem::document_and_reload()
 
 # Run the application
 #run_app()
-run_app_auth0()
+run_app_auth0(
+  onStart = function() {
+    shiny::enableBookmarking("server")
+  }
+)
