@@ -26,6 +26,9 @@ mod_map_server <- function(
   moduleServer(id, function(input, output, session){
     ns <- session$ns
 
+    # exclude map click input from bookmarks
+    shiny::setBookmarkExclude("map_marker_click")
+
     # reactive for click selection of marker
     selected_click <- reactiveVal(NULL)
 

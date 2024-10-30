@@ -57,6 +57,9 @@ mod_question_server <- function(
   moduleServer(id, function(input, output, session){
     ns <- session$ns
 
+    # exclude choice selection from bookmarks
+    shiny::setBookmarkExclude("question")
+
     # selected answer from user
     user_answer <- reactive({
       req(input$question)

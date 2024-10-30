@@ -2,6 +2,8 @@ default:
   golem_name: rph2024.haunted
   golem_version: 0.0.0.9000
   app_prod: no
+  pin_board_root_folder: "prototyping"
+  pin_board_root_name: "rph2024-haunted-app-sessions"
 production:
   app_prod: yes
 dev:

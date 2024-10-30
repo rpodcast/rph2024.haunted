@@ -4,11 +4,36 @@
 #'     DO NOT REMOVE.
 #' @import shiny
 #' @import elmer
+#' @import shinystate
 #' @importFrom markdown markdownToHTML
 #' @noRd
 app_server <- function(input, output, session) {
   # execute authentication information module
   user_info <- mod_auth_info_server("auth_info_1")
+
+  # create custom board based on their user name
+  app_board <- create_board(
+    convert_name(shiny::isolate(user_info()$user_name))
+  )
+
+  # initialize bookmarking state
+  storage <- StorageClass$new(local_storage_dir = "prototyping/shinystate_files", board_sessions = app_board)
+  storage$register_metadata()
+
+  # define inputs to exclude when bookmarking state
+  shiny::setBookmarkExclude(c("launch_quiz_question", "submit_answer"))
+
+  # define values to save/restore when bookmarking state
+  shiny::onBookmark(function(state) {
+    message("entered onBookmark server")
+    state$values$remove_locations <- remove_locations()
+    state$values$user_question_df <- user_question_df()
+  })
+
+  shiny::onRestore(function(state) {
+    remove_locations(state$values$remove_locations)
+    user_question_df(state$values$user_question_df)
+  })
 
   # initialize chat bot
   chat <- elmer::chat_openai(
@@ -138,6 +163,11 @@ app_server <- function(input, output, session) {
         current_submission_info_df
       )
     )
+    # create new bookmark snapshot
+    storage$snapshot()
+    shiny::showNotification("Session successfully saved")
+
+    # remove modal
     shiny::removeModal()
   })
 
@@ -147,7 +177,6 @@ app_server <- function(input, output, session) {
   })
 
   n_questions_correct <- reactive({
-    #req(user_question_df())
     if (is.null(user_question_df())) {
       return(0)
     } else {

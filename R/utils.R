@@ -15,6 +15,10 @@ random_name <- function() {
   sample(name_list, 1)
 }
 
+convert_name <- function(x) {
+  tolower(x) |> stringr::str_replace_all("\\s+", "-")
+}
+
 count_words <- function(x) {
   words <- stringr::str_split(x, "\\s+")[[1]]
   word_count <- length(words)
@@ -108,4 +112,18 @@ display_quiz_question <- function(place_name, question_text, correct_answer, inc
       incorrect_choice_3 = incorrect_choice_3
     )
   )
+}
+
+create_board <- function(user_name) {
+  if (golem::app_prod()) {
+    board <- pins::board_s3(
+      bucket = get_golem_config("pin_board_root_name"),
+      prefix = user_name
+    )
+  } else {
+    board_path <- file.path(get_golem_config("pin_board_root_folder"), get_golem_config("pin_board_root_name"), user_name)
+    if (!dir.exists(board_path)) dir.create(board_path, recursive = TRUE)
+    board <- pins::board_folder(board_path)
+  }
+  return(board)
 }
