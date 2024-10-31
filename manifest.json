@@ -4524,7 +4524,7 @@
       "checksum": "8d190255444a76f635dda1ecbe37fb31"
     },
     "app.R": {
-      "checksum": "77f86723c0a24bb07c3632d95f82baf6"
+      "checksum": "db31c5b63922784efd15bd311ef7b76f"
     },
     "data/haunted_places.csv": {
       "checksum": "c0b7f5873c4818e1cf2af8eb76ed96de"
@@ -4536,7 +4536,7 @@
       "checksum": "894bfd937f253470d9840c39e23c1fab"
     },
     "DESCRIPTION": {
-      "checksum": "788d4ac2aeffdc5d1b8174b941345f0d"
+      "checksum": "35acb1764389675266862d994bc1e067"
     },
     "inst/app/_auth0.yml": {
       "checksum": "5d2e7b99722f944c0a8a85b0219b5fd8"
@@ -4580,6 +4580,9 @@
     "inst/docs/prompt.md": {
       "checksum": "9a882bf5be24c39ad1580e941e02fd83"
     },
+    "inst/docs/random_names.txt": {
+      "checksum": "6464314d635fb46f2cd96e4417b883d3"
+    },
     "inst/docs/sidebar.md": {
       "checksum": "764192296e4b2b17131ddd101ae89e5c"
     },
@@ -4590,10 +4593,13 @@
       "checksum": "c0b7f5873c4818e1cf2af8eb76ed96de"
     },
     "inst/golem-config.yml": {
-      "checksum": "e83cc18235d16e38246753b875e4865b"
+      "checksum": "fd09f30cbbc64202df1f2c17a2a9ff36"
     },
     "NAMESPACE": {
       "checksum": "46d89129656f24ede593c76b8ae45206"
+    },
+    "prototyping/app_screenshot.png": {
+      "checksum": "2b7acc8d57f26d9a151dd91ca927bf46"
     },
     "prototyping/auth_stuff/auth0_connections_prev_app_1.png": {
       "checksum": "3e66aecce7fd3516dd2ad238019bb69b"
@@ -4650,10 +4656,10 @@
       "checksum": "cc6bce9cc094ee1e8b4558401a7e3d5e"
     },
     "R/app_ui.R": {
-      "checksum": "5ebb21b381614bfeb812f33f20a5bb21"
+      "checksum": "95acdec47f08ac79b9e67a27a4851222"
     },
     "R/mod_auth_info.R": {
-      "checksum": "61a9e214df33e09c0432679138f50ebb"
+      "checksum": "bd57165b5adefb7b8d6a7510ff1864cb"
     },
     "R/mod_map.R": {
       "checksum": "dbc056a727c9b2e377ee1d6520e73529"
@@ -4665,10 +4671,10 @@
       "checksum": "f2ebd3cce2946be14b1f8c9f6c6bf6c9"
     },
     "R/run_app.R": {
-      "checksum": "56b2b465c259f5df0f0b5930f0b0bf11"
+      "checksum": "122c7de9fcad268289f3168f621a86c3"
     },
     "R/utils.R": {
-      "checksum": "b5a496802345ea1443dfa689061c790c"
+      "checksum": "c59f49a0f4e3bdad74ed8fb1eb5990bc"
     }
   },
   "users": null
