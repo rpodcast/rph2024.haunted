@@ -9,7 +9,7 @@
 
 This repository contains a spooky Shiny application testing your math skills with randomly-generated quiz questions in the context of documented Haunted places in the United States! The data set used in this application is the [**Haunted Places in the United States**](https://github.com/rfordatascience/tidytuesday/tree/438293a970874a9b73c42bf58518f7dfe059fb29/data/2023/2023-10-10), shared by the fine folks in the [Tidy Tuesday](https://github.com/rfordatascience/tidytuesday) social data project and compiled by [Tim Renner](https://github.com/timothyrenner/shadowlands-haunted-places), with the original source coming from the [Shadowlands Haunted Places Index](https://www.theshadowlands.net/places/).
 
-You can visit the application (generously hosted on Posit Connect Cloud) at [https://bit.ly]()
+You can visit the application (generously hosted on Posit Connect Cloud) at [https://bit.ly/rph2024haunted](https://bit.ly/rph2024haunted)
 
 ## Application Workflow & Technical Stack
 
